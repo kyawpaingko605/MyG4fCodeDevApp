@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI STUDIO PRO - G4F CODE DEV"
+        android:textColor="#00FFCC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etCodePrompt"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/tvHeader"
+        android:background="#2D2D2D"
+        android:gravity="top|start"
+        android:hint="ဥပမာ- Write a Python script to scrape website data using BeautifulSoup."
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:id="@+id/btnGenerateCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCodePrompt"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#00FFCC"
+        android:textColor="#1E1E1E"
+        android:textStyle="bold"
+        android:text="GENERATE CODE WITH G4F" />
+
+    <ProgressBar
+        android:id="@+id/progressSpinner"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:elevation="5dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnGenerateCode"
+        android:layout_marginTop="16dp"
+        android:background="#0F0F0F"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvCodeOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ကုဒ်ရလဒ်များကို ဤနေရာတွင် ဖော်ပြပေးမည်။"
+            android:textColor="#00FF66"
+            android:fontFamily="monospace"
+            android:textSize="13sp" />
+    </ScrollView>
+</RelativeLayout>
